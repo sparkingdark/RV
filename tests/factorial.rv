@@ -1,0 +1,7 @@
+factorial = 5
+result = 1
+
+while factorial > 0 do
+    result = result * factorial
+    factorial = factorial - 1
+end

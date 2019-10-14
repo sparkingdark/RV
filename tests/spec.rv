@@ -1,0 +1,97 @@
+add 'library'
+
+
+-- inline comment, I end when the line ends
+
+--[[
+    multiline
+    comment
+    here
+]]
+
+
+--[=[
+    hello from the outer comment
+    --[[
+        hello from the nested comment
+    ]]
+]=]
+
+
+num = 50
+name = 'John'
+
+
+-- println adds a newline to the end of the string (same as: print "Hello, World!\n")
+println 'Hello, World!'
+println name -- John
+println num -- 50
+println num + 10 -- 60
+println num + name -- error! cannot add number and string
+println num @ name -- string concatenation 60John (num is converted into a string)
+
+-- basic math operations
+7 + 5 -- 12
+7 - 5 -- 2
+7 * 5 -- 35
+7 / 5 -- 1.4
+7 % 5 -- 2
+7 ** 5 -- 16807
+
+
+fun name(parameters)
+    do something 1
+    do something 2
+    if no explicit return, last expression is returned
+end
+
+-- For example:
+
+fun add(a, b)
+    return a + b
+end
+
+-- Is the same as..
+
+fun add(a, b)
+    a + b
+end
+
+condition = true
+if condition then
+    println 'Hello from the if statement!'
+else
+    println 'I won't be executed!'
+end
+
+
+expression = (1 + 2) / 3 -- expression is 1
+
+if expression > 5 then
+    println 'expression is bigger than 5'
+elif expression != 1 then
+    println 'expression does not equal to 1'
+else
+    println 'Hello from the else clause'
+end
+
+
+for i = 0, i < 5 do
+    println i
+end
+
+
+list = {1, 2, 3, 4, 5}
+
+
+for item of list do
+    println item
+end
+
+
+-- basic built in drawing functions
+
+square(size, {pos_x, pos_y} {r, g, b}) -- draws a square with sides of the specified size, position, and RGB color
+rect({width, height}, {pos_x, pos_y}, {r, g, b}) -- draws a rectangle
+circle(radius, {pos_x, pos_y}, {r, g, b})
+line(pos_start, pos_end, {r, g, b}, width)
